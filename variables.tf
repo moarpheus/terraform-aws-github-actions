@@ -15,9 +15,9 @@ variable "thumbprint_list" {
   validation {
     condition = alltrue([
       for n in var.thumbprint_list :
-      (length(n) > 39)
+      (length(n) == 40)
     ])
-    error_message = "Thumbprint length must be greater or equal to 40"
+    error_message = "Thumbprint length must be equal to 40"
   }
 }
 
