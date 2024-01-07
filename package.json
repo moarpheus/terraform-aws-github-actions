@@ -1,0 +1,38 @@
+{
+  "name": "terraform-aws-github-actions",
+  "description": "Terraform module enable github actions with aws account",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moarpheus/terraform-aws-github-actions.git"
+  },
+  "author": "Juris Gribuska",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/moarpheus/terraform-aws-github-actions/issues"
+  },
+  "devDependencies": {
+    "@semantic-release/github": "^8.1.0",
+    "git-cz": "^4.9.0",
+    "semantic-release": "^19.0.5"
+  },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    {
+      "npmPublish": false
+    }
+  ],
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+}
