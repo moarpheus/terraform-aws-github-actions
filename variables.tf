@@ -25,3 +25,8 @@ variable "tags" {
   type    = map(string)
   default = {}
 }
+
+variable "github_repo" {
+  type        = string
+  description = ""
+}
