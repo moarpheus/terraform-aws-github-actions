@@ -19,3 +19,8 @@ variable "github_repo" {
   type        = string
   description = ""
 }
+
+variable "github_actions_role_name" {
+  type    = string
+  default = "github_actions_automation"
+}

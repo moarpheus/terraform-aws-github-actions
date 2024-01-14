@@ -3,6 +3,7 @@ run "create_oidc" {
   variables {
     github_repo = "repo:user/repohere:ref:refs/heads/master"
     url = "https://test.mystuff.com"
+    github_actions_role_name = "test_role"
   }
 
   # Check that the OIDC is created with correct suffix

@@ -7,7 +7,7 @@ resource "aws_iam_openid_connect_provider" "github_oidc" {
 
 resource "aws_iam_role" "github_role" {
   description        = "Minimum permissions for Github actions automation"
-  name               = "github_actions_automation"
+  name               = var.github_actions_role_name
   assume_role_policy = data.aws_iam_policy_document.assume_role_github_actions.json
 }
 
