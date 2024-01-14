@@ -7,6 +7,7 @@ variable "url" {
 variable "client_id_list" {
   description = "A list of client IDs"
   type        = list(string)
+  default     = ["sts.amazonaws.com"]
 }
 
 variable "tags" {

@@ -3,9 +3,6 @@ run "create_oidc" {
   variables {
     github_repo = "repo:user/repohere:ref:refs/heads/master"
     url = "https://test.mystuff.com"
-    client_id_list = [
-      "sts.amazonaws.com",
-    ]
   }
 
   # Check that the OIDC is created with correct suffix
