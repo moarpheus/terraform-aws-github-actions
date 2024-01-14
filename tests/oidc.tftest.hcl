@@ -6,8 +6,6 @@ run "create_oidc" {
     client_id_list = [
       "sts.amazonaws.com",
     ]
-
-    thumbprint_list = ["1111111111111111111111111111111111111111",]
   }
 
   # Check that the OIDC is created with correct suffix
