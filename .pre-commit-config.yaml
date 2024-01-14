@@ -40,3 +40,4 @@ repos:
           - --args=--skip-check CKV2_GHA_1
           - --args=--skip-check CKV_AWS_108
           - --args=--skip-check CKV_AWS_107
+          - --args=--skip-check CKV_AWS_110

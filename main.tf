@@ -78,9 +78,31 @@ data "aws_iam_policy_document" "github_actions_role_policy" {
   }
 
   statement {
-    sid       = "iamgetuser"
-    effect    = "Allow"
-    actions   = ["iam:GetUser"]
+    sid    = "iam"
+    effect = "Allow"
+    actions = [
+      "iam:GetUser",
+      "iam:AttachRolePolicy",
+      "iam:CreateOpenIDConnectProvider",
+      "iam:CreatePolicy",
+      "iam:CreateRole",
+      "iam:DeleteOpenIDConnectProvider",
+      "iam:DeletePolicy",
+      "iam:DeleteRole",
+      "iam:DetachRolePolicy",
+      "iam:GetOpenIDConnectProvider",
+      "iam:GetPolicy",
+      "iam:GetPolicyVersion",
+      "iam:GetRole",
+      "iam:ListAttachedRolePolicies",
+      "iam:ListInstanceProfilesForRole",
+      "iam:ListPolicyVersions",
+      "iam:ListRolePolicies",
+      "iam:TagOpenIDConnectProvider",
+      "iam:UntagOpenIDConnectProvider",
+      "iam:UpdateOpenIDConnectProviderThumbprint",
+      "iam:UpdateRoleDescription"
+    ]
     resources = ["*"]
   }
 
@@ -132,6 +154,13 @@ data "aws_iam_policy_document" "github_actions_role_policy" {
       "s3:PutObject"
     ]
 
+    resources = ["*"]
+  }
+
+  statement {
+    sid       = "ec2describe"
+    effect    = "Allow"
+    actions   = ["ec2:DescribeAccountAttributes"]
     resources = ["*"]
   }
 }
