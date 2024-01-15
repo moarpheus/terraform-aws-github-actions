@@ -38,5 +38,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_github_role_arn"></a> [github\_role\_arn](#output\_github\_role\_arn) | n/a |
 | <a name="output_oidc_arn"></a> [oidc\_arn](#output\_oidc\_arn) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
