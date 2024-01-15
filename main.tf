@@ -110,6 +110,7 @@ data "aws_iam_policy_document" "github_actions_role_policy" {
     sid    = "kmskeys"
     effect = "Allow"
     actions = [
+      "kms:DescribeKey",
       "kms:CreateKey",
       "kms:DescribeKey",
       "kms:EnableKeyRotation",
