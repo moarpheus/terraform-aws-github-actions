@@ -17,7 +17,7 @@ variable "tags" {
 
 variable "github_repo" {
   type        = string
-  description = ""
+  description = "Github repo and branch that role is expected to be used with"
 }
 
 variable "github_actions_role_name" {
