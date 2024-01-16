@@ -30,8 +30,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_client_id_list"></a> [client\_id\_list](#input\_client\_id\_list) | A list of client IDs | `list(string)` | <pre>[<br>  "sts.amazonaws.com"<br>]</pre> | no |
 | <a name="input_github_actions_role_name"></a> [github\_actions\_role\_name](#input\_github\_actions\_role\_name) | n/a | `string` | `"github_actions_automation"` | no |
-| <a name="input_github_repo_branch"></a> [github\_repo\_branch](#input\_github\_repo\_branch) | Github repo and branch that role is expected to be used with | `string` | n/a | yes |
-| <a name="input_github_repo_name"></a> [github\_repo\_name](#input\_github\_repo\_name) | Github repo and branch that role is expected to be used with | `string` | n/a | yes |
+| <a name="input_github_repos"></a> [github\_repos](#input\_github\_repos) | List of Github repos and corresponding branches that role is expected to be used with | `map(string)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(string)` | `{}` | no |
 | <a name="input_url"></a> [url](#input\_url) | The URL of the identity provider | `string` | `"https://token.actions.githubusercontent.com"` | no |
 

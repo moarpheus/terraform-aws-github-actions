@@ -15,14 +15,9 @@ variable "tags" {
   default = {}
 }
 
-variable "github_repo_name" {
-  type        = string
-  description = "Github repo and branch that role is expected to be used with"
-}
-
-variable "github_repo_branch" {
-  type        = string
-  description = "Github repo and branch that role is expected to be used with"
+variable "github_repos" {
+  type        = map(string)
+  description = "List of Github repos and corresponding branches that role is expected to be used with"
 }
 
 variable "github_actions_role_name" {
