@@ -1,3 +1,3 @@
 locals {
-  repos_list = [for name, branch in var.github_repos : "repo:user/${name}:ref:refs/heads/${branch}"]
+  repos_list = [for repo, branch in var.github_repos : "repo:${repo}:ref:refs/heads/${branch}"]
 }
