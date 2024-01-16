@@ -1,7 +1,8 @@
 # Apply run block to create OIDC
 run "create_oidc" {
   variables {
-    github_repo = "repo:user/repohere:ref:refs/heads/master"
+    github_repo_name = "somerepo"
+    github_repo_branch = "master"
     url = "https://test.mystuff.com"
     github_actions_role_name = "test_role"
   }
