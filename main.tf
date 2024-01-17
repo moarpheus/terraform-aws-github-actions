@@ -112,14 +112,18 @@ data "aws_iam_policy_document" "github_actions_role_policy" {
     effect = "Allow"
     actions = [
       "kms:DescribeKey",
+      "kms:CreateAlias",
       "kms:CreateKey",
       "kms:DescribeKey",
       "kms:EnableKeyRotation",
       "kms:GetKeyPolicy",
       "kms:GetKeyRotationStatus",
       "kms:ListResourceTags",
+      "kms:ListAliases",
       "kms:PutKeyPolicy",
-      "kms:ScheduleKeyDeletion"
+      "kms:ScheduleKeyDeletion",
+      "kms:UpdateAlias",
+      "kms:DeleteAlias"
     ]
     resources = ["*"]
   }
