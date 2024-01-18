@@ -17,11 +17,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [aws_iam_openid_connect_provider.github_oidc](https://registry.terraform.io/providers/hashicorp/aws/5.29.0/docs/resources/iam_openid_connect_provider) | resource |
-| [aws_iam_policy.github_role_policy](https://registry.terraform.io/providers/hashicorp/aws/5.29.0/docs/resources/iam_policy) | resource |
-| [aws_iam_role.github_role](https://registry.terraform.io/providers/hashicorp/aws/5.29.0/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy_attachment.github_role_policy_attachement](https://registry.terraform.io/providers/hashicorp/aws/5.29.0/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_iam_policy_document.assume_role_github_actions](https://registry.terraform.io/providers/hashicorp/aws/5.29.0/docs/data-sources/iam_policy_document) | data source |
-| [aws_iam_policy_document.github_actions_role_policy](https://registry.terraform.io/providers/hashicorp/aws/5.29.0/docs/data-sources/iam_policy_document) | data source |
 | [tls_certificate.github](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/data-sources/certificate) | data source |
 
 ## Inputs
@@ -29,8 +24,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_client_id_list"></a> [client\_id\_list](#input\_client\_id\_list) | A list of client IDs | `list(string)` | <pre>[<br>  "sts.amazonaws.com"<br>]</pre> | no |
-| <a name="input_github_actions_role_name"></a> [github\_actions\_role\_name](#input\_github\_actions\_role\_name) | n/a | `string` | `"github_actions_automation"` | no |
-| <a name="input_github_repos"></a> [github\_repos](#input\_github\_repos) | List of Github repos and corresponding branches that role is expected to be used with | `map(string)` | n/a | yes |
 | <a name="input_tags"></a> [tags](#input\_tags) | n/a | `map(string)` | `{}` | no |
 | <a name="input_url"></a> [url](#input\_url) | The URL of the identity provider | `string` | `"https://token.actions.githubusercontent.com"` | no |
 
@@ -38,6 +31,5 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_github_role_arn"></a> [github\_role\_arn](#output\_github\_role\_arn) | n/a |
 | <a name="output_oidc_arn"></a> [oidc\_arn](#output\_oidc\_arn) | n/a |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
